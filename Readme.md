@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Марина Николаева](https://up.htmlacademy.ru/htmlcss/32/user/1820783).
-* Наставник: `Анна Волкова`.
+- Студент: [Марина Николаева](https://up.htmlacademy.ru/htmlcss/32/user/1820783).
+- Наставник: [Анна Волкова](https://htmlacademy.ru/profile/id477715).
 
 ---
 
