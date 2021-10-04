@@ -34,10 +34,6 @@ font-display: swap;
   background-repeat: no-repeat;
 }
 
-.catalog-filter-group {
-  display: inline-block;
-}
-
 .catalog-background {
   width: 1200px;
   background-image: url("../img/catalog/catalog-background.jpg");
