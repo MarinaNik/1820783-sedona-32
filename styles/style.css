@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -43,6 +51,33 @@ body {
 
 /* Pages */
 
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*header*/
+
+.site-navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding-right: 72px;
+  padding-left: 71px;
+  box-sizing: border-box;
+}
+
+.site-navigation-list {
+  width: 440px;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+}
+
 .site-navigation-list li {
   list-style: none;
 }
@@ -55,6 +90,16 @@ body {
   text-decoration: none;
   text-align: center;
 }
+
+.logo-header {
+  width: 140px;
+}
+
+.navigation-user {
+  width: 250px;
+  margin-left: auto;
+}
+
 
 /*welcome*/
 
@@ -87,6 +132,13 @@ body {
   color: #333333;
 }
 
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .advantages-list li {
   list-style: none;
   text-align: center;
@@ -98,6 +150,10 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-item {
+  width: 400px;
+}
+
 .advantages-item p {
   color: #333333;
 }
@@ -106,14 +162,42 @@ body {
   text-transform: uppercase;
 }
 
-.background-blue {
+.background-color {
   color: #ffffff;
   background-color: #83B3D3;
 }
 
-.background-blue p {
+.background-color p {
   color: #ffffff;
 }
+
+/*.image-after {
+  position: relative;
+}
+
+.image-before {
+  position: relative;
+}
+
+.image-after::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 400px;
+  width: 800px;
+  height: 384px;
+  background-image: url("../img/index/photo-1.jpg");
+}
+
+.image-before::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 400px;
+  width: 800px;
+  height: 384px;
+  background-image: url("../img/index/photo-2.jpg");
+}*/
 
 .extra-light {
   background: rgba(131, 179, 211, 0.12);
@@ -317,11 +401,29 @@ body {
 
 /*main-footer*/
 
+.page-footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+  padding-right: 72px;
+  padding-left: 72px;
+  box-sizing: border-box;
+}
+
+.footer-social-list {
+  width: 108px;
+  margin-right: 60px;
+  padding: 0;
+}
+
 .main-footer a {
   text-decoration: none;
 }
 
 .footer-contacts-phone {
+  max-width: 720px;
+  align-self: center;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
@@ -331,6 +433,11 @@ body {
 
 .footer-social-item {
   list-style: none;
+}
+
+.logo-copyright {
+  max-width: 115px;
+  margin-left: 53px;
 }
 
 
