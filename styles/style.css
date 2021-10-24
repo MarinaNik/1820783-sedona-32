@@ -28,7 +28,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 /*Buttons*/
@@ -38,7 +38,7 @@ body {
   font-size: 16px;
   line-height: 21px;
   text-align: center;
-  color: #ffffff;
+  color: #FFFFFF;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 4px;
@@ -51,7 +51,7 @@ body {
   margin-top: 5px;
   margin-bottom: 14px;
   align-self: center;
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: #756257;
 }
 
@@ -59,7 +59,6 @@ body {
 
 .main-container {
   flex-grow: 1;
-  margin-top: -10px;
 }
 
 .page-container {
@@ -69,13 +68,22 @@ body {
 
 /*header*/
 
+.main-header {
+  position: relative;
+}
+
 .site-navigation {
   display: flex;
   width: 1200px;
   margin: 0 auto;
   padding-right: 72px;
   padding-left: 62px;
+  padding-top: 8px;
   box-sizing: border-box;
+}
+
+.site-navigation.current {
+  border: 2px solid #756257;
 }
 
 .site-navigation-list {
@@ -85,16 +93,18 @@ body {
   margin: 0;
   margin-right: 28px;
   padding: 0;
-  padding-top: 13px;
+  padding-top: 6px;
   list-style: none;
+}
+
+.site-navigation .current {
+  border-bottom: 2px solid #756257;
 }
 
 .site-navigation-link {
   display: block;
   padding-top: 3px;
   padding-bottom: 3px;
-  padding-right: 9px;
-  padding-left: 9px;
   margin-right: 15px;
   text-align: center;
   align-items: center;
@@ -106,6 +116,9 @@ body {
 }
 
 .logo-header {
+  position: absolute;
+  top: -1px;
+  right: 45%;
   width: 140px;
   z-index: 1;
 }
@@ -122,18 +135,74 @@ body {
   min-width: 18px;
   min-height: 18px;
   padding: 7px;
-  padding-bottom: 11px;
   margin-right: 9px;
   align-self: center;
 }
 
 .favorite {
+  position: relative;
   min-width: 18px;
   min-height: 18px;
   padding: 7px;
-  padding-bottom: 14px;
   margin-right: 25px;
+  margin-bottom: 3px;
   align-self: center;
+}
+
+.favorite::after{
+  position: absolute;
+  top: -3px;
+  left: 19px;
+  content: "12";
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  font-size: 10px;
+  line-height: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #7DB550;
+}
+
+.site-navigation-item:active {
+  color: #756257;
+  opacity: 0.3;
+}
+
+.site-navigation-link:hover {
+  color: #756257;
+}
+
+.site-navigation-link:focus {
+  padding-right: 9px;
+  padding-left: 9px;
+  border: 3px solid #83B3D3;
+  border-radius: 10px;
+  outline: none;
+}
+
+.site-navigation-link:active {
+  color: #756257;
+}
+
+.search svg:hover path{
+  fill: #756257;
+}
+
+.favorite svg:hover path{
+  fill: #756257;
+}
+
+.navigation-user-link:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 10px;
+  outline: none;
+}
+
+.button-menu:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+  outline: none;
 }
 
 /*welcome*/
@@ -245,7 +314,7 @@ body {
 
 .advantages-number {
   display: block;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
   text-transform: uppercase;
 }
 
@@ -262,7 +331,7 @@ body {
 
 .recommendation-title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   text-align: center;
   font-size: 24px;
   line-height: 28px;
@@ -303,12 +372,12 @@ body {
 .background-color {
   display: flex;
   flex-direction: column;
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: #83b3d3;
 }
 
 .background-color p {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .extra-light {
@@ -323,7 +392,7 @@ body {
 
 .hotel-search {
   text-align: center;
-  padding-top: 90px;
+  padding-top: 89px;
   padding-right: 240px;
   padding-left: 240px;
   padding-bottom: 90px;
@@ -343,10 +412,8 @@ body {
 .hotel-search-link-index {
   display: inline-block;
   width: 575px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   font-size: 20px;
-  line-height: 36px;
+  line-height: 60px;
   background-color: #756257;
   border-radius: 10px;
 }
@@ -371,7 +438,7 @@ body {
 .subscribe-form-index {
   width: 1200px;
   height: 411px;
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: rgba(131, 179, 211, 0.9);
   background-image: url("../img/index/subscribe-background.jpg");
   background-repeat: no-repeat;
@@ -390,27 +457,27 @@ body {
 .subscribe-form-description {
   margin: 0;
   padding: 0;
-  margin-bottom: 44px;
+  margin-bottom: 47px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
 }
 
 .subscribe-form-description-index {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .subscribe-button {
   width: 200px;
   margin: 0;
   padding: 0;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   box-sizing: border-box;
   font-size: 20px;
   line-height: 26px;
   background-color: #83b3d3;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0 10px 10px 0;
   border: none;
 }
 
@@ -428,15 +495,14 @@ body {
 .subscribe-field {
   margin: 0;
   padding: 0;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  height: 60px;
   padding-left: 22px;
   padding-right: 22px;
   box-sizing: border-box;
   font-size: 18px;
   line-height: 26px;
   background: #F2F2F2;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 0 0 10px;
   border: none;
 }
 
@@ -448,7 +514,7 @@ body {
   grid-template-rows: 31px min-content 1fr 72px;
   width: 1200px;
   min-height: 408px;
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: rgba(131, 179, 211, 0.9);
   background-image: url("../img/catalog/catalog-background.jpg");
   background-repeat: no-repeat;
@@ -525,11 +591,6 @@ body {
   margin-bottom: 34px;
 }
 
-.filter-buttons-group p {
-  margin: 0;
-  padding: 0;
-}
-
 .filter-buttons-group {
   align-self: end;
 }
@@ -543,7 +604,7 @@ body {
   line-height: 20px;
   font-weight: normal;
   text-align: center;
-  color: #ffffff;
+  color: #FFFFFF;
   border: none;
   background-color: transparent;
 }
@@ -851,7 +912,7 @@ option {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: #83b3d3;
   border-radius: 4px;
 }
@@ -859,7 +920,7 @@ option {
 
 .pagination-current {
   color: #000000;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
 }
 
 .quantity-per-page {
@@ -894,6 +955,7 @@ option {
   width: 108px;
   margin: 0;
   padding: 0;
+  padding-top: 5px;
   margin-right: 60px;
 }
 
