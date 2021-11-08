@@ -284,7 +284,7 @@ body {
 
 /*popover-favorite*/
 
-.popover{
+.popover {
   position: absolute;
   top: 46px;
   right: -160px;
@@ -294,10 +294,10 @@ body {
   min-height: 146px;
   font-family: "PT Sans", sans-serif;
   background-color: #FFFFFF;
-  border: 1px solid #E6E6E6;
+
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-  display: none;
+  /*display: none;*/
 }
 
 .navigation-user-link .favorite:hover .popover-open {
@@ -306,19 +306,22 @@ body {
 
 .popover-background {
   position: relative;
-  width: 400px;
+  border: 1px solid #E6E6E6;
+  border-radius: 20px 20px 0 0;
+  border-bottom: 0;
+  width: 398px;
 }
 
-.popover-background::before {
-  position: absolute;
+.popover-background::after {
   content: "";
-  width: 20px;
-  height: 11px;
-  top: -10px;
-  right: 191px;
-  background-image: url("../img/icons/drop-popover.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  top: -0.4rem;
+  left: 11.9rem;
+  background-color: #FFFFFF;
+  box-shadow: -1px -1px 0 0 #E6E6E6;
 }
 
 .popover-content {
@@ -401,19 +404,21 @@ body {
   background-color: transparent;
 }
 
-.favorite-icon-delete {
+.delite-button::after {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  fill: rgba(0, 0, 0, 0.2);
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 0.4rem;
+  left: 0.4rem;
+  background-image: url("../img/icons/delete.svg");
+  background-repeat: no-repeat;
+  opacity: 0.2;
 }
 
-.delite-button:hover svg,
-.delite-button:focus svg {
-  fill: #000000;
+.delite-button:hover::after,
+.delite-button:focus::after {
+  opacity: 1;
 }
 
 .delite-button:focus {
@@ -421,8 +426,8 @@ body {
   border-radius: 10px;
 }
 
-.delite-button:active svg {
-  fill: rgba(0, 0, 0, 0.2);
+.delite-button:active::after {
+  opacity: 0.2;
 }
 
 .delite-button:active {
@@ -1760,6 +1765,7 @@ select.quantity-per-page:not([multiple]) {
   width: 100%;
   height: 100%;
   background: rgba(242, 242, 242, 0.8);
+  z-index: 100;
 }
 
 .modal-container-close {
@@ -1839,7 +1845,12 @@ select.quantity-per-page:not([multiple]) {
 
 .search-form-options {
   display: flex;
-  margin-bottom: 27px;
+  margin-bottom: 1px;
+}
+
+.field-group p {
+  margin: 0;
+  padding: 0;
 }
 
 .modal-search-form .field-group {
@@ -1847,7 +1858,7 @@ select.quantity-per-page:not([multiple]) {
   width: 575px;
   justify-content: space-between;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 40px;
 }
 
 .field-group input {
@@ -1920,83 +1931,42 @@ input[type="text"] {
   width: 420px;
 }
 
-.form-message-error {
+.message-error {
+  position: relative;
+}
+
+.message-success {
+  position: relative;
+}
+
+.message-error::after {
+  position: absolute;
+  content: "Мы не можем отправить вас в прошлое.";
+  width: 420px;
+  top: 3.1rem;
+  left: 9.65rem;
+  font-weight: 400;
   font-size: 16px;
   line-height: 29px;
   color:#FF5757;
-  /*visibility: hidden;*/
 }
 
-.form-message {
+.message-success::after {
+  position: absolute;
+  content: "На эти даты есть свободные номера. Пока есть.";
+  width: 420px;
+  top: 3.1rem;
+  left: 9.65rem;
+  font-weight: 400;
   font-size: 16px;
   line-height: 29px;
   color:#333333;
-  /*visibility: hidden;*/
 }
 
 .form-label-icon {
   position: relative;
   padding-top: 9px;
   padding-left: 57px;
-}
-
-.info {
-  position: absolute;
-  content: "";
-  width: 25px;
-  height: 25px;
-  padding: 0;
-  margin-top: 4px;
-  margin-left: -18px;
-  border-radius: 50%;
-  overflow: hidden;
-  background-image: url("../img/icons/modal-info.svg");
-  background-repeat: no-repeat;
-  border: none;
-}
-
-.modal-tooltip {
-  position: relative;
-}
-
-.modal-tooltip::before {
-  position: absolute;
-  content: "";
-  width: 19px;
-  height: 9px;
-  top: 1.8em;
-  left: -0.85em;
-  background-image: url("../img/icons/modal-tooltip-triangle.svg");
-  /*visibility: hidden;*/
-}
-
-.modal-tooltip::after {
-  box-sizing: border-box;
-  position: absolute;
-  content: "Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.";
-  width: 256px;
-  padding: 19px 18px 24px 23px;
-  top: 2.55rem;
-  left: -8.3rem;
-  font-size: 16px;
-  line-height: 20px;
-  color: #FFFFFF;
-  background-color: #333333;
-  border-radius: 10px;
-  /*visibility: hidden;*/
-}
-
-/*.modal-tooltip:hover .modal-tooltip::after {
-  opacity: 1;
-  visibility: visible;
-}*/
-
-.form-label-icon .info:hover  {
-  background-color: #68A2CA;
-}
-
-.form-label-icon .info:focus  {
-  outline: none;
 }
 
 .quantity-person {
@@ -2095,6 +2065,82 @@ input[type="text"] {
   outline: none;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.tooltip-s {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0.95rem;
+  left: 6.9rem;
+  background-color: #83B3D3;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tooltip::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 9px;
+  top: 30%;
+  left: 47%;
+  background-image: url("../img/icons/modal-info2.svg");
+  background-repeat: no-repeat;
+}
+
+.form-label-icon {
+  position: relative;
+}
+
+.form-label-icon span {
+/*visiblity: hidden; */
+  display: none;
+  position: absolute;
+  top: 119%;
+  left: -23%;
+  margin-top: -5px;
+  margin-left: 25px;
+}
+
+.form-label-icon button:hover + span {
+  cursor: pointer;
+  display: block;
+  /*visibility: visible; */
+  box-sizing: border-box;
+  width: 256px;
+  padding: 19px 18px 24px 23px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  z-index: 1;
+  color: #FFFFFF;
+  background-color: #333333;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.form-label-icon span:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #333333  transparent;
+  top: -19px;
+  left: 46%;
+}
+
 .modal-search-button {
   width: 575px;
   padding: 5px 10px;
@@ -2117,3 +2163,5 @@ input[type="text"] {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+
