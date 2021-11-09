@@ -1881,7 +1881,8 @@ select.quantity-per-page:not([multiple]) {
 .field-icon .date-field:not(:placeholder-shown) {
   background: #FFFFFF;
   color: #000000;
-  border: 2px solid #000000;
+  background-color: #F2F2F2;
+  /*border: 2px solid #000000;*/
   border-radius: 4px;
   outline: none;
 }
