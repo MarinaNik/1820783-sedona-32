@@ -37,7 +37,8 @@ body {
 .button {
   display: inline-block;
   box-sizing: border-box;
-  font-family: "PT Sans Bold", sans-serif;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
   font-size: 16px;
   line-height: 21px;
   text-align: center;
@@ -171,7 +172,8 @@ body {
   margin-right: 15px;
   text-align: center;
   align-items: center;
-  font-family: "PT Sans Bold", sans-serif;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   color: #000000;
@@ -317,6 +319,7 @@ body {
   width: 400px;
   min-height: 146px;
   font-family: "PT Sans", sans-serif;
+  font-weight: 400;
   background-color: #ffffff;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
@@ -1012,7 +1015,8 @@ fieldset.catalog-filter-group {
   grid-row: 1 / 2;
   padding: 0;
   margin-bottom: 30px;
-  font-family: "PT Sans Bold", sans-serif;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
 }
@@ -1102,6 +1106,7 @@ fieldset.catalog-filter-group {
 
 .input-container input[value] {
   font-family: "PT Sans", sans-serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 23px;
   color: #ffffff;
@@ -1292,7 +1297,8 @@ fieldset.catalog-filter-group {
   margin: 0;
   margin-bottom: 5px;
   align-self: center;
-  font-family: "PT Sans Bold", sans-serif;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
@@ -1502,7 +1508,7 @@ fieldset.catalog-filter-group {
 }
 
 .button-favorite {
-  max-width: 160px;
+  width: 160px;
   padding: 9px 30px;
   background-color: #83b3d3;
 }
@@ -1517,7 +1523,7 @@ fieldset.catalog-filter-group {
 }
 
 .button-in-favorite {
-  max-width: 160px;
+  width: 160px;
   padding: 9px 28px;
   padding-top: 8px;
   line-height: 20.7px;
@@ -1627,7 +1633,8 @@ fieldset.catalog-filter-group {
   min-width: 55px;
   min-height: 55px;
   padding: 14px 10px;
-  font-family: "PT Sans Bold", sans-serif;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-align: center;
@@ -2203,6 +2210,7 @@ input[type="text"] {
   width: 256px;
   padding: 19px 18px 24px 23px;
   font-family: "PT Sans", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-align: left;
