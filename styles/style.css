@@ -527,7 +527,7 @@ body {
 
 .title {
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 33px;
   padding: 0 70px;
   font-size: 30px;
   line-height: 36px;
@@ -753,8 +753,9 @@ body {
 .hotel-search-link-index {
   display: inline-block;
   width: 575px;
+  padding: 17px 0;
   font-size: 20px;
-  line-height: 60px;
+  line-height: 26px;
   background-color: #756257;
   border-radius: 10px;
 }
@@ -799,7 +800,7 @@ body {
 .subscribe-form-description {
   margin: 0;
   padding: 0;
-  margin-bottom: 47px;
+  margin-bottom: 48px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -1564,8 +1565,14 @@ fieldset.catalog-filter-group {
   border-radius: 4px;
 }
 
-.hotels-stars4 {
-  position: relative;
+.hotels-stars5::after {
+  content: "";
+  position: absolute;
+  width: 114px;
+  height: 17px;
+  top: 33px;
+  right: 25px;
+  background-image: url("../img/icons/stars-5.svg");
 }
 
 .hotels-stars4::after {
@@ -1596,6 +1603,16 @@ fieldset.catalog-filter-group {
   top: 33px;
   right: 58px;
   background-image: url("../img/icons/stars-2.svg");
+}
+
+.hotels-stars1::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 17px;
+  top: 33px;
+  right: 72px;
+  background-image: url("../img/icons/star-1.svg");
 }
 
 .button-download-more {
@@ -1725,6 +1742,10 @@ fieldset.catalog-filter-group {
 
 .footer-social-item:nth-child(2) {
   margin-right: 11px;
+}
+
+.footer-social-item:nth-child(3) {
+  margin-right: 9px;
 }
 
 .footer-social-link {
